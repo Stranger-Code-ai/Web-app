@@ -1,0 +1,28 @@
+.video-container{
+    display: grid;
+    grid-template-columns: 25vw 1fr 25vw;
+    grid-template-rows: 9vh 1fr 9vh;
+    margin-top: 30px;
+    height: 68.5vh;
+}
+.media-player{
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border-radius: 20px;
+}
+@media (max-width:1000px) {
+    .video-container{
+        grid-template-columns: 10vw 1fr 10vw;
+    }
+}
+@media (max-width:600px) {
+    .video-container{
+        grid-template-columns: 5vw 1fr 5vw;
+        grid-template-rows: 7vh 1fr 7vh;
+    }
+}

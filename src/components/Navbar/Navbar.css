@@ -1,0 +1,122 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5vh 5vw;
+    box-shadow: 0 1px 15px 0 #7c68ff;
+}
+.nav-logo{
+    font-size: 28px;
+    font-weight: 600;
+    background: linear-gradient(to top,#745eff ,#ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+.nav-logo span{
+    color: #ffffff;
+    text-shadow: 0 0 10px #503dcb ;
+}
+.nav-content{
+    display: flex;
+    align-items: center;
+    gap: 10vw;
+}
+
+.nav-body{
+    display: flex;
+    gap: 5vw;
+}
+.nav h3{
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.nav h3::after {
+    position: absolute;
+    content: "";
+    height: 0.13rem;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    background:linear-gradient(267deg,#806cff 0.36%,#721ceb 102.06%);
+    transform: scale(0,1);
+    transition: transform 0.3s ease;
+}
+.nav h3:hover::after{
+    transform: scale(1,1);
+}
+
+.nav-btn{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    background: linear-gradient(to bottom,rgb(128, 69, 231),rgb(111, 38, 236));
+    padding: 6px 20px;
+    border-radius: 8px ;
+    transition: ease 0.3s;
+}
+.nav-btn:hover{
+    transform: scale(1.1);
+}
+
+.main-nav{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:1200px){
+    .nav-content{
+        gap: 5vw;
+    }
+    .nav-body{
+        gap:4vw;
+    }
+    .nav h3{
+        font-size: 17px;
+    }
+    .nav-logo{
+        font-size: 20px;
+    }
+}
+
+.nav-responsive{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 3vh 5vw;
+    background-color: #6851ff;
+    z-index: 10;
+}
+.nav-responsive h3{
+    position: relative;
+    cursor: pointer;
+    width: 80%;
+    padding: 5px 0;
+    transition: ease 0.3s;
+}
+.nav-responsive h3:hover{
+    transform: translateX(20px);
+}
+.responsive-logo{
+    display: none;
+}
+
+@media (max-width:1000px) {
+    .nav-content{
+        display: none;
+    }
+    .responsive-logo{
+        display: inline;
+    }
+    .nav svg{
+        width: 4vw;
+        cursor: pointer;
+    }
+    .nav-responsive{
+        position: absolute;
+        top: 10%;
+    }
+}
